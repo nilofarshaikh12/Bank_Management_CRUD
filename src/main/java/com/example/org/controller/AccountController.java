@@ -1,6 +1,7 @@
 package com.example.org.controller;
 
 import java.util.List;
+
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,7 +26,7 @@ public class AccountController {
 	AccountService accountService;
 	
 	@PostMapping("/add")
-	public String createAccount(@RequestBody AccountRequestDTO accountRequestDTO)
+	public String createAccount(@Valid @RequestBody AccountRequestDTO accountRequestDTO)
 	{
 		accountService.createAccount(accountRequestDTO);
 		
@@ -45,7 +45,7 @@ public class AccountController {
 		return accountService.getAccountById(accountId);
 	}
 	
-	@PutMapping("/updateAccount/{accountId}")
+	@PatchMapping("/updateAccount/{accountId}")
 	public String updateAccount(@PathVariable UUID accountId, @RequestBody AccountRequestDTO accountRequestDTO)
 	{
 		accountService.updateAccount(accountId, accountRequestDTO);
