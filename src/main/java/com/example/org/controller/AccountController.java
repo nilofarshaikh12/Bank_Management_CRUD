@@ -26,7 +26,7 @@ public class AccountController {
 	AccountService accountService;
 	
 	@PostMapping("/add")
-	public String createAccount(@Valid @RequestBody AccountRequestDTO accountRequestDTO)
+	public String createAccount(@RequestBody AccountRequestDTO accountRequestDTO)
 	{
 		accountService.createAccount(accountRequestDTO);
 		

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.org.dto.AccountRequestDTO;
 import com.example.org.dto.AccountResponseDTO;
+import com.example.org.exceptions.AccountNotFoundException;
 import com.example.org.mapper.AccountMapper;
 import com.example.org.model.Account;
 import com.example.org.repository.AccountRepository;
@@ -46,6 +47,12 @@ public class AccountServiceImpl implements AccountService{
 	public AccountResponseDTO getAccountById(UUID accountId) {
 		
 		Account account=accountRepository.findByAccountIdAndIsDeletedFalse(accountId);
+		
+		if(account==null)
+		{
+			throw new AccountNotFoundException("Account not found!");
+		}
+		
 		return accountMapper.toResponseDTO(account);
 	}
 
