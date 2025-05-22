@@ -1,13 +1,11 @@
 package com.example.org.service;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
 
+import java.util.List;
+import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.example.org.dto.AccountRequestDTO;
 import com.example.org.dto.AccountResponseDTO;
 import com.example.org.mapper.AccountMapper;
