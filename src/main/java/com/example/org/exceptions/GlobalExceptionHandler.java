@@ -32,4 +32,10 @@ public class GlobalExceptionHandler {
 		return new ResponseEntity<>(errorResponse,HttpStatus.BAD_REQUEST);
 	}
 	
+	@ExceptionHandler(AccountDeleteFailedException.class)
+	public ResponseEntity<ErrorResponse> handleAccountDeleteFailedException(AccountDeleteFailedException ex){
+		
+		ErrorResponse errorResponse=new ErrorResponse(Constants.ACCOUNT_DELETE_FAILED, HttpStatus.BAD_REQUEST.value());
+		return new ResponseEntity<>(errorResponse,HttpStatus.BAD_REQUEST);
+	}
 }

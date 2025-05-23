@@ -10,6 +10,7 @@ import com.example.org.constants.Constants;
 import com.example.org.dto.AccountRequestDTO;
 import com.example.org.dto.AccountResponseDTO;
 import com.example.org.exceptions.AccountAddFailedException;
+import com.example.org.exceptions.AccountDeleteFailedException;
 import com.example.org.exceptions.AccountNotFoundException;
 import com.example.org.exceptions.AccountUpdateFailedException;
 import com.example.org.mapper.AccountMapper;
@@ -94,7 +95,13 @@ public class AccountServiceImpl implements AccountService{
 	@Override
 	public void deleteAccount(UUID accountId) {
 		Account account=accountRepository.findByAccountIdAndIsDeletedFalse(accountId);
-		account.setDeleted(true);	
+		
+		if(account==null)
+		{
+			throw new AccountDeleteFailedException(Constants.ACCOUNT_DELETE_FAILED);
+		}
+		account.setDeleted(true);
+		
 		accountRepository.save(account);
 		
 	}
