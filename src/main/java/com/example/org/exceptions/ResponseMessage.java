@@ -2,18 +2,29 @@ package com.example.org.exceptions;
 
 import java.time.LocalDateTime;
 
-public class ErrorResponse {
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class ResponseMessage<T> {
 
 	private String message;
 	private int status;
 	private LocalDateTime timestamp;
+	private T data;
 	
-	public ErrorResponse(String message,int status)
+	public ResponseMessage(String message,int status, T data)
 	{
 		this.message=message;
 		this.status=status;
+		this.data=data;
 		this.timestamp=LocalDateTime.now();
 	}
+	
+	public ResponseMessage(String message,int status) {
+		this(message,status,null);
+	}
+	
 	
 	public String getMessage()
 	{
@@ -28,5 +39,9 @@ public class ErrorResponse {
 	public LocalDateTime getTimestamp()
 	{
 		return timestamp;
+	}
+
+	public T getData() {
+		return data;
 	}
 }

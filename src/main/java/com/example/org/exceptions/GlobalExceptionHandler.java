@@ -11,31 +11,27 @@ import com.example.org.constants.Constants;
 public class GlobalExceptionHandler {
 
 	@ExceptionHandler(AccountAddFailedException.class)
-	public ResponseEntity<ErrorResponse> handleAccountAddFailedException(AccountAddFailedException ex){
-		
-		ErrorResponse errorResponse=new ErrorResponse(Constants.ACCOUNT_ADD_FAILED, HttpStatus.BAD_REQUEST.value());
-		return new ResponseEntity<>(errorResponse,HttpStatus.BAD_REQUEST);
+	public ResponseEntity<ResponseMessage<Void>> handleAccountAddFailedException(AccountAddFailedException ex){
+		ResponseMessage<Void> response=new ResponseMessage<>(Constants.ACCOUNT_ADD_FAILED, HttpStatus.BAD_REQUEST.value());
+		return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
 	}
 	
 	
 	@ExceptionHandler(AccountNotFoundException.class)
-	public ResponseEntity<ErrorResponse> handleAccountNotFoundException(AccountNotFoundException ex){
-		
-		ErrorResponse errorResponse=new ErrorResponse(Constants.ACCOUNT_NOT_FOUND, HttpStatus.NOT_FOUND.value());
-		return new ResponseEntity<>(errorResponse,HttpStatus.NOT_FOUND);
+	public ResponseEntity<ResponseMessage<Void>> handleAccountNotFoundException(AccountNotFoundException ex){
+		ResponseMessage<Void> response=new ResponseMessage<>(Constants.ACCOUNT_NOT_FOUND, HttpStatus.NOT_FOUND.value());
+		return new ResponseEntity<>(response,HttpStatus.NOT_FOUND);
 	}
 	
 	@ExceptionHandler(AccountUpdateFailedException.class)
-	public ResponseEntity<ErrorResponse> handleAccountUpdateFailedException(AccountUpdateFailedException ex){
-		
-		ErrorResponse errorResponse=new ErrorResponse(Constants.ACCOUNT_UPDATE_FAILED, HttpStatus.BAD_REQUEST.value());
-		return new ResponseEntity<>(errorResponse,HttpStatus.BAD_REQUEST);
+	public ResponseEntity<ResponseMessage<Void>> handleAccountUpdateFailedException(AccountUpdateFailedException ex){
+		ResponseMessage<Void> response=new ResponseMessage<>(Constants.ACCOUNT_UPDATE_FAILED, HttpStatus.BAD_REQUEST.value());
+		return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
 	}
 	
 	@ExceptionHandler(AccountDeleteFailedException.class)
-	public ResponseEntity<ErrorResponse> handleAccountDeleteFailedException(AccountDeleteFailedException ex){
-		
-		ErrorResponse errorResponse=new ErrorResponse(Constants.ACCOUNT_DELETE_FAILED, HttpStatus.BAD_REQUEST.value());
-		return new ResponseEntity<>(errorResponse,HttpStatus.BAD_REQUEST);
+	public ResponseEntity<ResponseMessage<Void>> handleAccountDeleteFailedException(AccountDeleteFailedException ex){
+		ResponseMessage<Void> response=new ResponseMessage<>(Constants.ACCOUNT_DELETE_FAILED, HttpStatus.BAD_REQUEST.value());
+		return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
 	}
 }

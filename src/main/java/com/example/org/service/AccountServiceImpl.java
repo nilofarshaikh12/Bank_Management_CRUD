@@ -31,7 +31,6 @@ public class AccountServiceImpl implements AccountService{
 		try {
 		Account account=accountMapper.toEntity(accountRequestDTO);
 		account.setDeleted(false);
-		
 		Account saved=accountRepository.save(account);
 		return accountMapper.toResponseDTO(saved);
 		}
@@ -43,16 +42,12 @@ public class AccountServiceImpl implements AccountService{
 	
 	@Override
 	public List<AccountResponseDTO> getAllAccounts() {
-		
 		List<Account> accounts=accountRepository.findByIsDeletedFalse();
 		List<AccountResponseDTO> list=new ArrayList<>();
-		for(Account acc:accounts)
-		{
+		for(Account acc:accounts){
 			list.add(accountMapper.toResponseDTO(acc));
 		}
-		
-		if(list.isEmpty())
-		{
+		if(list.isEmpty()){
 			throw new AccountNotFoundException(Constants.ACCOUNT_NOT_FOUND);
 		}
 		return list;
@@ -61,33 +56,24 @@ public class AccountServiceImpl implements AccountService{
 	
 	@Override
 	public AccountResponseDTO getAccountById(UUID accountId) {
-		
 		Account account=accountRepository.findByAccountIdAndIsDeletedFalse(accountId);
-		
-		if(account==null)
-		{
+		if(account==null){
 			throw new AccountNotFoundException(Constants.ACCOUNT_NOT_FOUND);
 		}
-		
 		return accountMapper.toResponseDTO(account);
 	}
 
 	
 	@Override
 	public AccountResponseDTO updateAccount(UUID accountId, AccountRequestDTO accountRequestDTO) {
-		
 		Account account=accountRepository.findByAccountIdAndIsDeletedFalse(accountId);
-		
 		if(account==null) {
 			throw new AccountUpdateFailedException(Constants.ACCOUNT_UPDATE_FAILED);
-		}
-		
+		}	
 		account.setCustomerMobileNumber(accountRequestDTO.getCustomerMobileNumber());
 		account.setCustomerEmail(accountRequestDTO.getCustomerEmail());
 		account.setCustomerAddress(accountRequestDTO.getCustomerAddress());
-		
 		accountRepository.save(account);
-		
 		return accountMapper.toResponseDTO(account);
 	}
 
@@ -95,15 +81,11 @@ public class AccountServiceImpl implements AccountService{
 	@Override
 	public void deleteAccount(UUID accountId) {
 		Account account=accountRepository.findByAccountIdAndIsDeletedFalse(accountId);
-		
-		if(account==null)
-		{
+		if(account==null){
 			throw new AccountDeleteFailedException(Constants.ACCOUNT_DELETE_FAILED);
 		}
 		account.setDeleted(true);
-		
-		accountRepository.save(account);
-		
+		accountRepository.save(account);	
 	}
 	
 	

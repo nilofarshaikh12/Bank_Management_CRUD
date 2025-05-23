@@ -9,13 +9,13 @@ import com.example.org.dto.AccountResponseDTO;
 
 public interface AccountService {
 	
-	public AccountResponseDTO createAccount(AccountRequestDTO accountRequestDTO);
+	 AccountResponseDTO createAccount(AccountRequestDTO accountRequestDTO);
 	
-	public List<AccountResponseDTO> getAllAccounts();
+	 List<AccountResponseDTO> getAllAccounts();
 	
-	public AccountResponseDTO getAccountById(UUID accountId);
+	 AccountResponseDTO getAccountById(UUID accountId);
 	
-	public AccountResponseDTO updateAccount(UUID accountId, AccountRequestDTO accountRequestDTO);
+	 AccountResponseDTO updateAccount(UUID accountId, AccountRequestDTO accountRequestDTO);
 	
-	public void deleteAccount(UUID accountId);
+	 void deleteAccount(UUID accountId);
 }
