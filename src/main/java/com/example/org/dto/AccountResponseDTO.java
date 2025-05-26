@@ -14,6 +14,11 @@ public class AccountResponseDTO {
 	private AccountType accountType;
 	private double balance;
 
+	
+	public AccountResponseDTO() {
+		super();
+	}
+
 	public AccountResponseDTO(UUID accountId, String customerName, String customerMobileNumber, String customerEmail,
 			String customerAddress, AccountType accountType, double balance) {
 		super();

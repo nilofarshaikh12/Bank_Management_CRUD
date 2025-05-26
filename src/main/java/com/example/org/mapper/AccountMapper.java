@@ -5,7 +5,7 @@ import com.example.org.dto.AccountRequestDTO;
 import com.example.org.dto.AccountResponseDTO;
 import com.example.org.model.Account;
 
-@Mapper(componentModel = "spring")
+//@Mapper(componentModel = "spring")
 public interface AccountMapper {
 
 	
