@@ -8,6 +8,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Min;
 
 @Entity
 public class Account {
@@ -24,6 +25,7 @@ public class Account {
 	private AccountType accountType;
 
 	private double balance;
+	
 	private boolean isDeleted = false;
 
 	

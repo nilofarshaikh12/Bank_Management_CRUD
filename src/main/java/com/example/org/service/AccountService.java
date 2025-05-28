@@ -6,16 +6,17 @@ import java.util.UUID;
 
 import com.example.org.dto.AccountRequestDTO;
 import com.example.org.dto.AccountResponseDTO;
+import com.example.org.exceptions.ResponseMessage;
 
 public interface AccountService {
 	
-	 AccountResponseDTO createAccount(AccountRequestDTO accountRequestDTO);
+	 ResponseMessage<AccountResponseDTO> createAccount(AccountRequestDTO accountRequestDTO);
 	
-	 List<AccountResponseDTO> getAllAccounts();
+	 ResponseMessage<List<AccountResponseDTO>> getAllAccounts();
 	
-	 AccountResponseDTO getAccountById(UUID accountId);
+	 ResponseMessage<AccountResponseDTO> getAccountById(UUID accountId);
 	
-	 AccountResponseDTO updateAccount(UUID accountId, AccountRequestDTO accountRequestDTO);
+	 ResponseMessage<AccountResponseDTO> updateAccount(UUID accountId, AccountRequestDTO accountRequestDTO);
 	
-	 void deleteAccount(UUID accountId);
+	 ResponseMessage<Void> deleteAccount(UUID accountId);
 }
