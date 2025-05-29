@@ -31,6 +31,15 @@ public class AccountResponseDTO {
 		this.balance = balance;
 	}
 
+	
+	@Override
+	public String toString() {
+		return "AccountResponseDTO [accountId=" + accountId + ", customerName=" + customerName
+				+ ", customerMobileNumber=" + customerMobileNumber + ", customerEmail=" + customerEmail
+				+ ", customerAddress=" + customerAddress + ", accountType=" + accountType + ", balance=" + balance
+				+ "]";
+	}
+
 	public UUID getAccountId() {
 		return accountId;
 	}

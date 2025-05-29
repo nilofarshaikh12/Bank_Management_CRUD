@@ -1,7 +1,6 @@
 package com.example.org.dto;
 
 import com.example.org.model.AccountType;
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -42,6 +41,14 @@ public class AccountRequestDTO {
 	}
 
 	
+	@Override
+	public String toString() {
+		return "AccountRequestDTO [customerName=" + customerName + ", customerMobileNumber=" + customerMobileNumber
+				+ ", customerEmail=" + customerEmail + ", customerAddress=" + customerAddress + ", accountType="
+				+ accountType + ", balance=" + balance + "]";
+	}
+
+
 	public String getCustomerName() {
 		return customerName;
 	}

@@ -1,14 +1,14 @@
 package com.example.org.model;
 
 import java.util.UUID;
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.Min;
+
 
 @Entity
 public class Account {
@@ -17,7 +17,11 @@ public class Account {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID accountId;
 	private String customerName;
+	
+	@Column(unique=true)
 	private String customerMobileNumber;
+	
+	@Column(unique=true)
 	private String customerEmail;
 	private String customerAddress;
 
@@ -43,6 +47,15 @@ public class Account {
 	}
 	
 	
+
+	@Override
+	public String toString() {
+		return "Account [accountId=" + accountId + ", customerName=" + customerName + ", customerMobileNumber="
+				+ customerMobileNumber + ", customerEmail=" + customerEmail + ", customerAddress=" + customerAddress
+				+ ", accountType=" + accountType + ", balance=" + balance + ", isDeleted=" + isDeleted + "]";
+	}
+
+
 
 	public Account() {
 		super();
