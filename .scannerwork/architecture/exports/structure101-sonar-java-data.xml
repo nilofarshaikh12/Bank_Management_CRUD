@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data flavor="com.sonarsource.architecture.export.java" version="1.0.0" site="https://www.sonarsource.com/">
+  <modules>
+    <module id="700518240" type="folder" name="&lt;externals&gt;" fat="1" />
+    <module id="1786967435" type="file" name="src/main/java/com/example/org/dto/AccountResponseDTO.java" fat="26">
+      <submodule id="-53973123" type="class" name="AccountResponseDTO" fat="25">
+        <submodule id="-2103866365" type="method" name="getCustomerMobileNumber" fat="1" />
+        <submodule id="-1750177664" type="method" name="toString" fat="1" />
+        <submodule id="447358070" type="method" name="getBalance" fat="1" />
+        <submodule id="-1843473929" type="method" name="setAccountType" fat="1" />
+        <submodule id="-884072917" type="method" name="getAccountType" fat="1" />
+        <submodule id="1094283198" type="field" name="customerMobileNumber" fat="1" />
+        <submodule id="1858284222" type="field" name="customerName" fat="1" />
+        <submodule id="-191212708" type="method" name="setCustomerEmail" fat="1" />
+        <submodule id="-1581011524" type="method" name="getCustomerEmail" fat="1" />
+        <submodule id="-983449777" type="field" name="customerEmail" fat="1" />
+        <submodule id="-1777824329" type="field" name="customerAddress" fat="1" />
+        <submodule id="-126140104" type="method" name="AccountResponseDTO" fat="1" />
+        <submodule id="884038237" type="method" name="setCustomerName" fat="1" />
+        <submodule id="-949798959" type="field" name="balance" fat="1" />
+        <submodule id="282189260" type="method" name="setBalance" fat="1" />
+        <submodule id="1920211269" type="field" name="accountId" fat="1" />
+        <submodule id="-1791113200" type="method" name="getAccountId" fat="1" />
+        <submodule id="-1906590717" type="method" name="getCustomerName" fat="1" />
+        <submodule id="-1349457508" type="method" name="setAccountId" fat="1" />
+        <submodule id="-1016932771" type="method" name="setCustomerMobileNumber" fat="1" />
+        <submodule id="1969403396" type="method" name="setCustomerAddress" fat="1" />
+        <submodule id="-1804334842" type="field" name="accountType" fat="1" />
+        <submodule id="1321658556" type="method" name="AccountResponseDTO" fat="1" />
+        <submodule id="1882841876" type="method" name="getCustomerAddress" fat="1" />
+      </submodule>
+    </module>
+    <module id="-1527408662" type="file" name="src/main/java/com/example/org/service/AccountService.java" fat="7">
+      <submodule id="-909261923" type="interface" name="AccountService" fat="6">
+        <submodule id="-1161434689" type="method" name="deleteAccount" fat="1" />
+        <submodule id="593281830" type="method" name="createAccount" fat="1" />
+        <submodule id="240585328" type="method" name="getAllAccounts" fat="1" />
+        <submodule id="-1104050924" type="method" name="getAccountById" fat="1" />
+        <submodule id="2063842439" type="method" name="updateAccount" fat="1" />
+      </submodule>
+    </module>
+    <module id="-252922403" type="file" name="src/main/java/com/example/org/constants/Constants.java" fat="14">
+      <submodule id="-1672878525" type="class" name="Constants" fat="13">
+        <submodule id="1932669633" type="field" name="ACCOUNTS_FETCHED" fat="1" />
+        <submodule id="-565770036" type="field" name="ACCOUNT_FETCHED" fat="1" />
+        <submodule id="-485540841" type="field" name="INVALID_MOBILE" fat="1" />
+        <submodule id="-1132017635" type="field" name="ACCOUNT_CREATED" fat="1" />
+        <submodule id="-775719662" type="field" name="ACCOUNT_UPDATE_FAILED" fat="1" />
+        <submodule id="889630850" type="field" name="EMAIL_EXISTS" fat="1" />
+        <submodule id="-1060929804" type="field" name="ACCOUNT_DELETE_FAILED" fat="1" />
+        <submodule id="-954687430" type="field" name="MOBILE_EXISTS" fat="1" />
+        <submodule id="686920234" type="field" name="ACCOUNT_UPDATED" fat="1" />
+        <submodule id="-1393100972" type="field" name="ACCOUNT_ADD_FAILED" fat="1" />
+        <submodule id="867118476" type="field" name="ACCOUNT_DELETED" fat="1" />
+        <submodule id="-1525055985" type="field" name="ACCOUNT_NOT_FOUND" fat="1" />
+      </submodule>
+    </module>
+    <module id="1662285498" type="file" name="src/main/java/com/example/org/repository/AccountRepository.java" fat="8">
+      <submodule id="-1972555573" type="interface" name="AccountRepository" fat="7">
+        <submodule id="933531284" type="method" name="existsByCustomerEmailAndAccountIdAndIsDeletedFalse" fat="1" />
+        <submodule id="1465997583" type="method" name="existsByCustomerEmailAndIsDeletedFalse" fat="1" />
+        <submodule id="1560141484" type="method" name="findByIsDeletedFalse" fat="1" />
+        <submodule id="167429802" type="method" name="findByAccountIdAndIsDeletedFalse" fat="1" />
+        <submodule id="-1577622769" type="method" name="existsByCustomerMobileNumberAndAccountIdAndIsDeletedFalse" fat="1" />
+        <submodule id="504505354" type="method" name="existsByCustomerMobileNumberAndIsDeletedFalse" fat="1" />
+      </submodule>
+    </module>
+    <module id="-302942262" type="file" name="src/main/java/com/example/org/converter/AccountConverter.java" fat="4">
+      <submodule id="1300030204" type="class" name="AccountConverter" fat="3">
+        <submodule id="1287652392" type="method" name="toResponseDTO" fat="1" />
+        <submodule id="1036119531" type="method" name="toEntity" fat="1" />
+      </submodule>
+    </module>
+    <module id="2129739941" type="file" name="src/main/java/com/example/org/exceptions/AccountUpdateFailedException.java" fat="3">
+      <submodule id="-561236988" type="exception" name="AccountUpdateFailedException" fat="2">
+        <submodule id="-1290510314" type="method" name="AccountUpdateFailedException" fat="1" />
+      </submodule>
+    </module>
+    <module id="793721905" type="file" name="src/main/java/com/example/org/exceptions/ResponseMessage.java" fat="12">
+      <submodule id="-1146111999" type="class" name="ResponseMessage" fat="11">
+        <submodule id="-1672722241" type="method" name="ResponseMessage" fat="1" />
+        <submodule id="-313634166" type="method" name="getTimestamp" fat="1" />
+        <submodule id="-1308873206" type="field" name="message" fat="1" />
+        <submodule id="498982457" type="field" name="data" fat="1" />
+        <submodule id="1607853233" type="field" name="status" fat="1" />
+        <submodule id="1951979661" type="method" name="getStatus" fat="1" />
+        <submodule id="-1397139982" type="method" name="getData" fat="1" />
+        <submodule id="1984945193" type="method" name="getMessage" fat="1" />
+        <submodule id="1654868579" type="method" name="ResponseMessage" fat="1" />
+        <submodule id="1266877595" type="field" name="timestamp" fat="1" />
+      </submodule>
+    </module>
+    <module id="1817905834" type="file" name="src/main/java/com/example/org/service/AccountServiceImpl.java" fat="10">
+      <submodule id="283578780" type="class" name="AccountServiceImpl" fat="9">
+        <submodule id="-383830828" type="method" name="getAccountById" fat="1" />
+        <submodule id="183864277" type="field" name="accountConverter" fat="1" />
+        <submodule id="998253286" type="method" name="createAccount" fat="1" />
+        <submodule id="662913535" type="method" name="deleteAccount" fat="1" />
+        <submodule id="1209091032" type="field" name="logger" fat="1" />
+        <submodule id="689169109" type="field" name="accountRepository" fat="1" />
+        <submodule id="-1273218512" type="method" name="getAllAccounts" fat="1" />
+        <submodule id="1978637383" type="method" name="updateAccount" fat="1" />
+      </submodule>
+    </module>
+    <module id="416778119" type="file" name="src/main/java/com/example/org/exceptions/AccountDeleteFailedException.java" fat="3">
+      <submodule id="2020768486" type="exception" name="AccountDeleteFailedException" fat="2">
+        <submodule id="-159106188" type="method" name="AccountDeleteFailedException" fat="1" />
+      </submodule>
+    </module>
+    <module id="-1781150683" type="file" name="src/main/java/com/example/org/model/Account.java" fat="29">
+      <submodule id="1388788875" type="class" name="Account" fat="28">
+        <submodule id="1838274984" type="method" name="getBalance" fat="1" />
+        <submodule id="-1976501525" type="method" name="setCustomerMobileNumber" fat="1" />
+        <submodule id="1495037518" type="method" name="setAccountId" fat="1" />
+        <submodule id="1584839116" type="field" name="isDeleted" fat="1" />
+        <submodule id="-1167977842" type="method" name="setCustomerEmail" fat="1" />
+        <submodule id="-1178882484" type="method" name="Account" fat="1" />
+        <submodule id="450940634" type="method" name="setBalance" fat="1" />
+        <submodule id="-1443471907" type="method" name="getAccountType" fat="1" />
+        <submodule id="1667893794" type="method" name="getCustomerAddress" fat="1" />
+        <submodule id="-1480788112" type="field" name="customerMobileNumber" fat="1" />
+        <submodule id="-724455148" type="field" name="accountType" fat="1" />
+        <submodule id="974816368" type="field" name="customerName" fat="1" />
+        <submodule id="671291103" type="field" name="balance" fat="1" />
+        <submodule id="-1609072955" type="field" name="customerAddress" fat="1" />
+        <submodule id="-2004973435" type="method" name="setAccountType" fat="1" />
+        <submodule id="1693817821" type="field" name="customerEmail" fat="1" />
+        <submodule id="-1303536203" type="method" name="getCustomerMobileNumber" fat="1" />
+        <submodule id="-399019850" type="method" name="setCustomerAddress" fat="1" />
+        <submodule id="714632403" type="field" name="accountId" fat="1" />
+        <submodule id="957194165" type="method" name="getCustomerName" fat="1" />
+        <submodule id="-532943637" type="method" name="setCustomerName" fat="1" />
+        <submodule id="1922128417" type="method" name="isDeleted" fat="1" />
+        <submodule id="-1691547922" type="method" name="Account" fat="1" />
+        <submodule id="378854686" type="method" name="getAccountId" fat="1" />
+        <submodule id="1296973898" type="method" name="getCustomerEmail" fat="1" />
+        <submodule id="1782802702" type="method" name="toString" fat="1" />
+        <submodule id="-1721404947" type="method" name="setDeleted" fat="1" />
+      </submodule>
+    </module>
+    <module id="-1154246261" type="file" name="src/main/java/com/example/org/model/AccountType.java" fat="6">
+      <submodule id="-1314092184" type="enum" name="AccountType" fat="5">
+        <submodule id="1086604329" type="method" name="values" fat="1" />
+        <submodule id="2089818280" type="field" name="SAVINGS" fat="1" />
+        <submodule id="-710164504" type="field" name="CURRENT" fat="1" />
+        <submodule id="-140488766" type="method" name="valueOf" fat="1" />
+      </submodule>
+    </module>
+    <module id="363069206" type="file" name="src/main/java/com/example/org/controller/AccountController.java" fat="8">
+      <submodule id="-65266586" type="class" name="AccountController" fat="7">
+        <submodule id="-2000989434" type="method" name="updateAccount" fat="1" />
+        <submodule id="178719338" type="method" name="deleteAccount" fat="1" />
+        <submodule id="217874981" type="method" name="createAccount" fat="1" />
+        <submodule id="-763307885" type="method" name="getAccountById" fat="1" />
+        <submodule id="465821334" type="field" name="accountService" fat="1" />
+        <submodule id="-1511123985" type="method" name="getAllAccounts" fat="1" />
+      </submodule>
+    </module>
+    <module id="-1312138439" type="file" name="src/main/java/com/example/org/exceptions/AccountAddFailedException.java" fat="3">
+      <submodule id="117937248" type="exception" name="AccountAddFailedException" fat="2">
+        <submodule id="-1539383494" type="method" name="AccountAddFailedException" fat="1" />
+      </submodule>
+    </module>
+    <module id="1235494271" type="file" name="src/main/java/com/example/org/dto/AccountRequestDTO.java" fat="22">
+      <submodule id="1097979173" type="class" name="AccountRequestDTO" fat="21">
+        <submodule id="-1853057531" type="method" name="setCustomerMobileNumber" fat="1" />
+        <submodule id="1663285710" type="method" name="getBalance" fat="1" />
+        <submodule id="2127705622" type="field" name="customerName" fat="1" />
+        <submodule id="796876980" type="method" name="setCustomerEmail" fat="1" />
+        <submodule id="-1723534973" type="method" name="getAccountType" fat="1" />
+        <submodule id="1556194143" type="field" name="customerAddress" fat="1" />
+        <submodule id="-1638107096" type="method" name="toString" fat="1" />
+        <submodule id="-1614776967" type="field" name="balance" fat="1" />
+        <submodule id="1775998308" type="method" name="getCustomerEmail" fat="1" />
+        <submodule id="-678759564" type="method" name="setBalance" fat="1" />
+        <submodule id="501561179" type="method" name="getCustomerMobileNumber" fat="1" />
+        <submodule id="-1164729578" type="field" name="customerMobileNumber" fat="1" />
+        <submodule id="-53919227" type="method" name="setCustomerName" fat="1" />
+        <submodule id="1529492142" type="field" name="accountType" fat="1" />
+        <submodule id="-1221320969" type="field" name="customerEmail" fat="1" />
+        <submodule id="-849483588" type="method" name="AccountRequestDTO" fat="1" />
+        <submodule id="-2096993889" type="method" name="setAccountType" fat="1" />
+        <submodule id="-1959146148" type="method" name="setCustomerAddress" fat="1" />
+        <submodule id="-1521205413" type="method" name="getCustomerName" fat="1" />
+        <submodule id="-1846116164" type="method" name="getCustomerAddress" fat="1" />
+      </submodule>
+    </module>
+    <module id="-1957483666" type="file" name="src/main/java/com/example/org/exceptions/AccountNotFoundException.java" fat="3">
+      <submodule id="1296723149" type="exception" name="AccountNotFoundException" fat="2">
+        <submodule id="-1276679315" type="method" name="AccountNotFoundException" fat="1" />
+      </submodule>
+    </module>
+    <module id="-151568886" type="file" name="src/main/java/com/example/org/BankManagementSystemApplication.java" fat="3">
+      <submodule id="1967101617" type="class" name="BankManagementSystemApplication" fat="2">
+        <submodule id="2051534080" type="method" name="main" fat="1" />
+      </submodule>
+    </module>
+  </modules>
+  <dependencies>
+    <dependency from="-2103866365" to="1094283198" type="references" />
+    <dependency from="-1750177664" to="1920211269" type="references" />
+    <dependency from="-1750177664" to="1858284222" type="references" />
+    <dependency from="-1750177664" to="1094283198" type="references" />
+    <dependency from="-1750177664" to="-983449777" type="references" />
+    <dependency from="-1750177664" to="-1777824329" type="references" />
+    <dependency from="-1750177664" to="-1314092184" type="uses" />
+    <dependency from="-1750177664" to="-1804334842" type="references" />
+    <dependency from="-1750177664" to="-949798959" type="references" />
+    <dependency from="447358070" to="-949798959" type="references" />
+    <dependency from="-1843473929" to="-1314092184" type="has param" />
+    <dependency from="-1843473929" to="-53973123" type="uses" />
+    <dependency from="-1843473929" to="-1804334842" type="references" />
+    <dependency from="-884072917" to="-1314092184" type="returns" />
+    <dependency from="-884072917" to="-1804334842" type="references" />
+    <dependency from="-191212708" to="-53973123" type="uses" />
+    <dependency from="-191212708" to="-983449777" type="references" />
+    <dependency from="-1581011524" to="-983449777" type="references" />
+    <dependency from="-126140104" to="-1314092184" type="has param" />
+    <dependency from="-126140104" to="-53973123" type="calls" />
+    <dependency from="-126140104" to="1920211269" type="references" />
+    <dependency from="-126140104" to="1858284222" type="references" />
+    <dependency from="-126140104" to="1094283198" type="references" />
+    <dependency from="-126140104" to="-983449777" type="references" />
+    <dependency from="-126140104" to="-1777824329" type="references" />
+    <dependency from="-126140104" to="-1804334842" type="references" />
+    <dependency from="-126140104" to="-949798959" type="references" />
+    <dependency from="884038237" to="-53973123" type="uses" />
+    <dependency from="884038237" to="1858284222" type="references" />
+    <dependency from="282189260" to="-53973123" type="uses" />
+    <dependency from="282189260" to="-949798959" type="references" />
+    <dependency from="-1791113200" to="1920211269" type="references" />
+    <dependency from="-1906590717" to="1858284222" type="references" />
+    <dependency from="-1349457508" to="-53973123" type="uses" />
+    <dependency from="-1349457508" to="1920211269" type="references" />
+    <dependency from="-1016932771" to="-53973123" type="uses" />
+    <dependency from="-1016932771" to="1094283198" type="references" />
+    <dependency from="1969403396" to="-53973123" type="uses" />
+    <dependency from="1969403396" to="-1777824329" type="references" />
+    <dependency from="-1804334842" to="-1314092184" type="is type" />
+    <dependency from="1321658556" to="-53973123" type="calls" />
+    <dependency from="1882841876" to="-1777824329" type="references" />
+    <dependency from="-1161434689" to="-1146111999" type="returns" />
+    <dependency from="593281830" to="-1146111999" type="returns" />
+    <dependency from="593281830" to="1097979173" type="has param" />
+    <dependency from="593281830" to="-53973123" type="uses" />
+    <dependency from="240585328" to="-1146111999" type="returns" />
+    <dependency from="240585328" to="-53973123" type="uses" />
+    <dependency from="-1104050924" to="-1146111999" type="returns" />
+    <dependency from="-1104050924" to="-53973123" type="uses" />
+    <dependency from="2063842439" to="-1146111999" type="returns" />
+    <dependency from="2063842439" to="1097979173" type="has param" />
+    <dependency from="2063842439" to="-53973123" type="uses" />
+    <dependency from="-1972555573" to="1388788875" type="uses" />
+    <dependency from="1560141484" to="1388788875" type="uses" />
+    <dependency from="167429802" to="1388788875" type="returns" />
+    <dependency from="1287652392" to="-53973123" type="returns" />
+    <dependency from="1287652392" to="1388788875" type="has param" />
+    <dependency from="1287652392" to="-1349457508" type="calls" />
+    <dependency from="1287652392" to="378854686" type="calls" />
+    <dependency from="1287652392" to="884038237" type="calls" />
+    <dependency from="1287652392" to="957194165" type="calls" />
+    <dependency from="1287652392" to="-1016932771" type="calls" />
+    <dependency from="1287652392" to="-1303536203" type="calls" />
+    <dependency from="1287652392" to="-191212708" type="calls" />
+    <dependency from="1287652392" to="1296973898" type="calls" />
+    <dependency from="1287652392" to="1969403396" type="calls" />
+    <dependency from="1287652392" to="1667893794" type="calls" />
+    <dependency from="1287652392" to="-1843473929" type="calls" />
+    <dependency from="1287652392" to="-1314092184" type="returns" />
+    <dependency from="1287652392" to="-1443471907" type="calls" />
+    <dependency from="1287652392" to="282189260" type="calls" />
+    <dependency from="1287652392" to="1838274984" type="calls" />
+    <dependency from="1036119531" to="1388788875" type="returns" />
+    <dependency from="1036119531" to="1097979173" type="has param" />
+    <dependency from="1036119531" to="-532943637" type="calls" />
+    <dependency from="1036119531" to="-1521205413" type="calls" />
+    <dependency from="1036119531" to="-1976501525" type="calls" />
+    <dependency from="1036119531" to="501561179" type="calls" />
+    <dependency from="1036119531" to="-1167977842" type="calls" />
+    <dependency from="1036119531" to="1775998308" type="calls" />
+    <dependency from="1036119531" to="-399019850" type="calls" />
+    <dependency from="1036119531" to="-1846116164" type="calls" />
+    <dependency from="1036119531" to="-2004973435" type="calls" />
+    <dependency from="1036119531" to="-1314092184" type="returns" />
+    <dependency from="1036119531" to="-1723534973" type="calls" />
+    <dependency from="1036119531" to="450940634" type="calls" />
+    <dependency from="1036119531" to="1663285710" type="calls" />
+    <dependency from="-1290510314" to="-561236988" type="calls" />
+    <dependency from="-1672722241" to="-1146111999" type="calls" />
+    <dependency from="-1672722241" to="-1308873206" type="references" />
+    <dependency from="-1672722241" to="1607853233" type="references" />
+    <dependency from="-1672722241" to="1266877595" type="references" />
+    <dependency from="-313634166" to="1266877595" type="references" />
+    <dependency from="1951979661" to="1607853233" type="references" />
+    <dependency from="1984945193" to="-1308873206" type="references" />
+    <dependency from="1654868579" to="-1146111999" type="calls" />
+    <dependency from="283578780" to="-909261923" type="implements" />
+    <dependency from="-383830828" to="-1146111999" type="returns" />
+    <dependency from="-383830828" to="-53973123" type="uses" />
+    <dependency from="-383830828" to="1209091032" type="references" />
+    <dependency from="-383830828" to="1388788875" type="is type" />
+    <dependency from="-383830828" to="-1972555573" type="references" />
+    <dependency from="-383830828" to="167429802" type="calls" />
+    <dependency from="-383830828" to="689169109" type="references" />
+    <dependency from="-383830828" to="-1672878525" type="uses" />
+    <dependency from="-383830828" to="-1525055985" type="references" />
+    <dependency from="-383830828" to="1300030204" type="references" />
+    <dependency from="-383830828" to="1287652392" type="calls" />
+    <dependency from="-383830828" to="183864277" type="references" />
+    <dependency from="-383830828" to="-565770036" type="references" />
+    <dependency from="183864277" to="1300030204" type="is type" />
+    <dependency from="998253286" to="-1146111999" type="returns" />
+    <dependency from="998253286" to="1097979173" type="has param" />
+    <dependency from="998253286" to="-53973123" type="uses" />
+    <dependency from="998253286" to="1209091032" type="references" />
+    <dependency from="998253286" to="-1972555573" type="references" />
+    <dependency from="998253286" to="504505354" type="calls" />
+    <dependency from="998253286" to="689169109" type="references" />
+    <dependency from="998253286" to="501561179" type="calls" />
+    <dependency from="998253286" to="-1672878525" type="uses" />
+    <dependency from="998253286" to="-954687430" type="references" />
+    <dependency from="998253286" to="1465997583" type="calls" />
+    <dependency from="998253286" to="1775998308" type="calls" />
+    <dependency from="998253286" to="889630850" type="references" />
+    <dependency from="998253286" to="-485540841" type="references" />
+    <dependency from="998253286" to="1388788875" type="is type" />
+    <dependency from="998253286" to="1300030204" type="references" />
+    <dependency from="998253286" to="1036119531" type="calls" />
+    <dependency from="998253286" to="183864277" type="references" />
+    <dependency from="998253286" to="-1721404947" type="calls" />
+    <dependency from="998253286" to="1287652392" type="calls" />
+    <dependency from="998253286" to="378854686" type="calls" />
+    <dependency from="998253286" to="-1132017635" type="references" />
+    <dependency from="998253286" to="-1393100972" type="references" />
+    <dependency from="662913535" to="-1146111999" type="returns" />
+    <dependency from="662913535" to="1209091032" type="references" />
+    <dependency from="662913535" to="1388788875" type="is type" />
+    <dependency from="662913535" to="-1972555573" type="references" />
+    <dependency from="662913535" to="167429802" type="calls" />
+    <dependency from="662913535" to="689169109" type="references" />
+    <dependency from="662913535" to="-1672878525" type="uses" />
+    <dependency from="662913535" to="-1525055985" type="references" />
+    <dependency from="662913535" to="-1721404947" type="calls" />
+    <dependency from="662913535" to="867118476" type="references" />
+    <dependency from="662913535" to="-1060929804" type="references" />
+    <dependency from="1209091032" to="283578780" type="uses" />
+    <dependency from="689169109" to="-1972555573" type="is type" />
+    <dependency from="-1273218512" to="-1146111999" type="returns" />
+    <dependency from="-1273218512" to="-53973123" type="uses" />
+    <dependency from="-1273218512" to="1209091032" type="references" />
+    <dependency from="-1273218512" to="1388788875" type="uses" />
+    <dependency from="-1273218512" to="-1972555573" type="references" />
+    <dependency from="-1273218512" to="1560141484" type="calls" />
+    <dependency from="-1273218512" to="689169109" type="references" />
+    <dependency from="-1273218512" to="1300030204" type="references" />
+    <dependency from="-1273218512" to="1287652392" type="calls" />
+    <dependency from="-1273218512" to="183864277" type="references" />
+    <dependency from="-1273218512" to="-1672878525" type="uses" />
+    <dependency from="-1273218512" to="-1525055985" type="references" />
+    <dependency from="-1273218512" to="1932669633" type="references" />
+    <dependency from="1978637383" to="-1146111999" type="returns" />
+    <dependency from="1978637383" to="1097979173" type="has param" />
+    <dependency from="1978637383" to="-53973123" type="uses" />
+    <dependency from="1978637383" to="1209091032" type="references" />
+    <dependency from="1978637383" to="1388788875" type="is type" />
+    <dependency from="1978637383" to="-1972555573" type="references" />
+    <dependency from="1978637383" to="167429802" type="calls" />
+    <dependency from="1978637383" to="689169109" type="references" />
+    <dependency from="1978637383" to="-1672878525" type="uses" />
+    <dependency from="1978637383" to="-1525055985" type="references" />
+    <dependency from="1978637383" to="-1577622769" type="calls" />
+    <dependency from="1978637383" to="501561179" type="calls" />
+    <dependency from="1978637383" to="-954687430" type="references" />
+    <dependency from="1978637383" to="933531284" type="calls" />
+    <dependency from="1978637383" to="1775998308" type="calls" />
+    <dependency from="1978637383" to="889630850" type="references" />
+    <dependency from="1978637383" to="-1976501525" type="calls" />
+    <dependency from="1978637383" to="-1167977842" type="calls" />
+    <dependency from="1978637383" to="-399019850" type="calls" />
+    <dependency from="1978637383" to="-1846116164" type="calls" />
+    <dependency from="1978637383" to="1300030204" type="references" />
+    <dependency from="1978637383" to="1287652392" type="calls" />
+    <dependency from="1978637383" to="183864277" type="references" />
+    <dependency from="1978637383" to="686920234" type="references" />
+    <dependency from="1978637383" to="-775719662" type="references" />
+    <dependency from="-159106188" to="2020768486" type="calls" />
+    <dependency from="1838274984" to="671291103" type="references" />
+    <dependency from="-1976501525" to="1388788875" type="uses" />
+    <dependency from="-1976501525" to="-1480788112" type="references" />
+    <dependency from="1495037518" to="1388788875" type="uses" />
+    <dependency from="1495037518" to="714632403" type="references" />
+    <dependency from="-1167977842" to="1388788875" type="uses" />
+    <dependency from="-1167977842" to="1693817821" type="references" />
+    <dependency from="-1178882484" to="-1314092184" type="has param" />
+    <dependency from="-1178882484" to="1388788875" type="calls" />
+    <dependency from="-1178882484" to="714632403" type="references" />
+    <dependency from="-1178882484" to="974816368" type="references" />
+    <dependency from="-1178882484" to="-1480788112" type="references" />
+    <dependency from="-1178882484" to="1693817821" type="references" />
+    <dependency from="-1178882484" to="-1609072955" type="references" />
+    <dependency from="-1178882484" to="-724455148" type="references" />
+    <dependency from="-1178882484" to="671291103" type="references" />
+    <dependency from="-1178882484" to="1584839116" type="references" />
+    <dependency from="450940634" to="1388788875" type="uses" />
+    <dependency from="450940634" to="671291103" type="references" />
+    <dependency from="-1443471907" to="-1314092184" type="returns" />
+    <dependency from="-1443471907" to="-724455148" type="references" />
+    <dependency from="1667893794" to="-1609072955" type="references" />
+    <dependency from="-724455148" to="-1314092184" type="is type" />
+    <dependency from="-2004973435" to="-1314092184" type="has param" />
+    <dependency from="-2004973435" to="1388788875" type="uses" />
+    <dependency from="-2004973435" to="-724455148" type="references" />
+    <dependency from="-1303536203" to="-1480788112" type="references" />
+    <dependency from="-399019850" to="1388788875" type="uses" />
+    <dependency from="-399019850" to="-1609072955" type="references" />
+    <dependency from="957194165" to="974816368" type="references" />
+    <dependency from="-532943637" to="1388788875" type="uses" />
+    <dependency from="-532943637" to="974816368" type="references" />
+    <dependency from="1922128417" to="1584839116" type="references" />
+    <dependency from="-1691547922" to="1388788875" type="calls" />
+    <dependency from="378854686" to="714632403" type="references" />
+    <dependency from="1296973898" to="1693817821" type="references" />
+    <dependency from="1782802702" to="714632403" type="references" />
+    <dependency from="1782802702" to="974816368" type="references" />
+    <dependency from="1782802702" to="-1480788112" type="references" />
+    <dependency from="1782802702" to="1693817821" type="references" />
+    <dependency from="1782802702" to="-1609072955" type="references" />
+    <dependency from="1782802702" to="-1314092184" type="uses" />
+    <dependency from="1782802702" to="-724455148" type="references" />
+    <dependency from="1782802702" to="671291103" type="references" />
+    <dependency from="1782802702" to="1584839116" type="references" />
+    <dependency from="-1721404947" to="1388788875" type="uses" />
+    <dependency from="-1721404947" to="1584839116" type="references" />
+    <dependency from="2089818280" to="-1314092184" type="calls" />
+    <dependency from="-710164504" to="-1314092184" type="calls" />
+    <dependency from="-2000989434" to="1097979173" type="has param" />
+    <dependency from="-2000989434" to="-1146111999" type="uses" />
+    <dependency from="-2000989434" to="-53973123" type="uses" />
+    <dependency from="-2000989434" to="-909261923" type="references" />
+    <dependency from="-2000989434" to="2063842439" type="calls" />
+    <dependency from="-2000989434" to="465821334" type="references" />
+    <dependency from="-2000989434" to="1951979661" type="calls" />
+    <dependency from="178719338" to="-1146111999" type="uses" />
+    <dependency from="178719338" to="-909261923" type="references" />
+    <dependency from="178719338" to="-1161434689" type="calls" />
+    <dependency from="178719338" to="465821334" type="references" />
+    <dependency from="178719338" to="1951979661" type="calls" />
+    <dependency from="217874981" to="1097979173" type="has param" />
+    <dependency from="217874981" to="-1146111999" type="uses" />
+    <dependency from="217874981" to="-53973123" type="uses" />
+    <dependency from="217874981" to="-909261923" type="references" />
+    <dependency from="217874981" to="593281830" type="calls" />
+    <dependency from="217874981" to="465821334" type="references" />
+    <dependency from="217874981" to="1951979661" type="calls" />
+    <dependency from="-763307885" to="-1146111999" type="uses" />
+    <dependency from="-763307885" to="-53973123" type="uses" />
+    <dependency from="-763307885" to="-909261923" type="references" />
+    <dependency from="-763307885" to="-1104050924" type="calls" />
+    <dependency from="-763307885" to="465821334" type="references" />
+    <dependency from="-763307885" to="1951979661" type="calls" />
+    <dependency from="465821334" to="-909261923" type="is type" />
+    <dependency from="-1511123985" to="-1146111999" type="uses" />
+    <dependency from="-1511123985" to="-53973123" type="uses" />
+    <dependency from="-1511123985" to="-909261923" type="references" />
+    <dependency from="-1511123985" to="240585328" type="calls" />
+    <dependency from="-1511123985" to="465821334" type="references" />
+    <dependency from="-1511123985" to="1951979661" type="calls" />
+    <dependency from="-1539383494" to="117937248" type="calls" />
+    <dependency from="-1853057531" to="1097979173" type="uses" />
+    <dependency from="-1853057531" to="-1164729578" type="references" />
+    <dependency from="1663285710" to="-1614776967" type="references" />
+    <dependency from="796876980" to="1097979173" type="uses" />
+    <dependency from="796876980" to="-1221320969" type="references" />
+    <dependency from="-1723534973" to="-1314092184" type="returns" />
+    <dependency from="-1723534973" to="1529492142" type="references" />
+    <dependency from="-1638107096" to="2127705622" type="references" />
+    <dependency from="-1638107096" to="-1164729578" type="references" />
+    <dependency from="-1638107096" to="-1221320969" type="references" />
+    <dependency from="-1638107096" to="1556194143" type="references" />
+    <dependency from="-1638107096" to="-1314092184" type="uses" />
+    <dependency from="-1638107096" to="1529492142" type="references" />
+    <dependency from="-1638107096" to="-1614776967" type="references" />
+    <dependency from="1775998308" to="-1221320969" type="references" />
+    <dependency from="-678759564" to="1097979173" type="uses" />
+    <dependency from="-678759564" to="-1614776967" type="references" />
+    <dependency from="501561179" to="-1164729578" type="references" />
+    <dependency from="-53919227" to="1097979173" type="uses" />
+    <dependency from="-53919227" to="2127705622" type="references" />
+    <dependency from="1529492142" to="-1314092184" type="is type" />
+    <dependency from="-849483588" to="-1314092184" type="has param" />
+    <dependency from="-849483588" to="1097979173" type="calls" />
+    <dependency from="-849483588" to="2127705622" type="references" />
+    <dependency from="-849483588" to="-1164729578" type="references" />
+    <dependency from="-849483588" to="-1221320969" type="references" />
+    <dependency from="-849483588" to="1556194143" type="references" />
+    <dependency from="-849483588" to="1529492142" type="references" />
+    <dependency from="-849483588" to="-1614776967" type="references" />
+    <dependency from="-2096993889" to="-1314092184" type="has param" />
+    <dependency from="-2096993889" to="1097979173" type="uses" />
+    <dependency from="-2096993889" to="1529492142" type="references" />
+    <dependency from="-1959146148" to="1097979173" type="uses" />
+    <dependency from="-1959146148" to="1556194143" type="references" />
+    <dependency from="-1521205413" to="2127705622" type="references" />
+    <dependency from="-1846116164" to="1556194143" type="references" />
+    <dependency from="-1276679315" to="1296723149" type="calls" />
+    <dependency from="2051534080" to="1967101617" type="uses" />
+  </dependencies>
+</data>

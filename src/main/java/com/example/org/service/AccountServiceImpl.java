@@ -31,6 +31,21 @@ public class AccountServiceImpl implements AccountService {
 	public ResponseMessage<AccountResponseDTO> createAccount(AccountRequestDTO accountRequestDTO) {
 		logger.info("creating account for request: {}",accountRequestDTO);
 		try {
+			
+			if(accountRepository.existsByCustomerMobileNumberAndIsDeletedFalse(accountRequestDTO.getCustomerMobileNumber())) {
+				logger.warn("mobile number {} already exists",accountRequestDTO.getCustomerMobileNumber());
+				return new ResponseMessage<>(Constants.MOBILE_EXISTS,HttpStatus.BAD_REQUEST.value());
+			}
+			
+			if(accountRepository.existsByCustomerEmailAndIsDeletedFalse(accountRequestDTO.getCustomerEmail())) {
+				logger.warn("Email address {} already exists",accountRequestDTO.getCustomerEmail());
+				return new ResponseMessage<>(Constants.EMAIL_EXISTS,HttpStatus.BAD_REQUEST.value());
+			}
+			
+			if(accountRequestDTO.getCustomerMobileNumber().length()!=10) {
+				logger.warn("Invalid mobile number {}",accountRequestDTO.getCustomerMobileNumber());
+				return new ResponseMessage<>(Constants.INVALID_MOBILE, HttpStatus.BAD_REQUEST.value());
+			}
 			Account account = accountConverter.toEntity(accountRequestDTO);
 			account.setDeleted(false);
 		    Account saved=accountRepository.save(account);
@@ -92,6 +107,17 @@ public class AccountServiceImpl implements AccountService {
 				logger.warn("Account with id {} not found for updating",accountId);
 				return new ResponseMessage<>(Constants.ACCOUNT_NOT_FOUND, HttpStatus.NOT_FOUND.value());
 			}
+			
+			if(accountRepository.existsByCustomerMobileNumberAndAccountIdAndIsDeletedFalse(accountRequestDTO.getCustomerMobileNumber(), accountId)) {
+				logger.warn("Mobile number {} already exist",accountRequestDTO.getCustomerMobileNumber());
+				return new ResponseMessage<>(Constants.MOBILE_EXISTS, HttpStatus.BAD_REQUEST.value());
+			}
+			
+			if(accountRepository.existsByCustomerEmailAndAccountIdAndIsDeletedFalse(accountRequestDTO.getCustomerEmail(), accountId)) {
+				logger.warn("Email address {} already exists",accountRequestDTO.getCustomerEmail());
+				return new ResponseMessage<>(Constants.EMAIL_EXISTS, HttpStatus.BAD_REQUEST.value());
+			}
+			
 			logger.debug("Original account data: {}",account);
 			logger.debug("Update data: {}",accountRequestDTO);
 			account.setCustomerMobileNumber(accountRequestDTO.getCustomerMobileNumber());

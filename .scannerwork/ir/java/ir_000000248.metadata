@@ -1,0 +1,5 @@
+com.example.org.exceptions.AccountDeleteFailedException#<init>(Ljava/lang/String;)V
+false
+9511fd13777e37805f0f23d33bce7ab3
+==
+<init> java.lang.RuntimeException#<init>(Ljava/lang/String;)V

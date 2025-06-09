@@ -1,0 +1,7 @@
+com.example.org.controller.AccountController#deleteAccount(Ljava/util/UUID;)LResponseEntity;
+false
+f123b88b29c9d010861295d7ac97076e
+==
+!unknownMethod! !unknownMethod!
+deleteAccount com.example.org.service.AccountService#deleteAccount(Ljava/util/UUID;)Lcom/example/org/exceptions/ResponseMessage;
+getStatus com.example.org.exceptions.ResponseMessage#getStatus()I

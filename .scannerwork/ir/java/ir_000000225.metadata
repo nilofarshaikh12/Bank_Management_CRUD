@@ -1,0 +1,18 @@
+com.example.org.converter.AccountConverter#toEntity(Lcom/example/org/dto/AccountRequestDTO;)Lcom/example/org/model/Account;
+false
+2cf3f2a750bb6832cef3f41cc39feab6
+com.example.org.model.Account#<init>()V
+com.example.org.model.Account#instance-init#
+==
+getAccountType com.example.org.dto.AccountRequestDTO#getAccountType()Lcom/example/org/model/AccountType;
+getBalance com.example.org.dto.AccountRequestDTO#getBalance()D
+getCustomerAddress com.example.org.dto.AccountRequestDTO#getCustomerAddress()Ljava/lang/String;
+getCustomerEmail com.example.org.dto.AccountRequestDTO#getCustomerEmail()Ljava/lang/String;
+getCustomerMobileNumber com.example.org.dto.AccountRequestDTO#getCustomerMobileNumber()Ljava/lang/String;
+getCustomerName com.example.org.dto.AccountRequestDTO#getCustomerName()Ljava/lang/String;
+setAccountType com.example.org.model.Account#setAccountType(Lcom/example/org/model/AccountType;)V
+setBalance com.example.org.model.Account#setBalance(D)V
+setCustomerAddress com.example.org.model.Account#setCustomerAddress(Ljava/lang/String;)V
+setCustomerEmail com.example.org.model.Account#setCustomerEmail(Ljava/lang/String;)V
+setCustomerMobileNumber com.example.org.model.Account#setCustomerMobileNumber(Ljava/lang/String;)V
+setCustomerName com.example.org.model.Account#setCustomerName(Ljava/lang/String;)V

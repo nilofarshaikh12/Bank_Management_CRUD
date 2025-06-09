@@ -1,0 +1,6 @@
+projectKey=bank-management-system
+serverUrl=http://localhost:9000
+serverVersion=2025.1.2.108896
+dashboardUrl=http://localhost:9000/dashboard?id=bank-management-system
+ceTaskId=91777c98-57df-4114-b6d2-c57361262af7
+ceTaskUrl=http://localhost:9000/api/ce/task?id=91777c98-57df-4114-b6d2-c57361262af7

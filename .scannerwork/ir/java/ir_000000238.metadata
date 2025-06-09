@@ -1,0 +1,7 @@
+com.example.org.controller.AccountController#getAccountById(Ljava/util/UUID;)LResponseEntity;
+false
+307f7c6af8d52da27c1939f4627d8f89
+==
+!unknownMethod! !unknownMethod!
+getAccountById com.example.org.service.AccountService#getAccountById(Ljava/util/UUID;)Lcom/example/org/exceptions/ResponseMessage;
+getStatus com.example.org.exceptions.ResponseMessage#getStatus()I

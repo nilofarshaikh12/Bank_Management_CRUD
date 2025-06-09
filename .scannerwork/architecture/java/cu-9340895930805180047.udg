@@ -1,0 +1,226 @@
+
+1.0bank-management-systemJavaFrontend"1749404289129*java2.Bé	
+;
+6src/main/java/com/example/org/constants/Constants.java2
+
+package4
+
+com.example.org.constants5
+(
+#com.example.org.constants.Constants7
+
+
+class8
+
+access9
+
+public10
+
+simple name11
+
+	Constants12
+
+
+uses13
+;
+5com.example.org.constants.Constants.ACCOUNT_NOT_FOUND15
+
+field16
+
+ACCOUNT_NOT_FOUND17
+<
+6com.example.org.constants.Constants.ACCOUNT_ADD_FAILED19
+
+ACCOUNT_ADD_FAILED20
+?
+9com.example.org.constants.Constants.ACCOUNT_UPDATE_FAILED22
+
+ACCOUNT_UPDATE_FAILED23
+?
+9com.example.org.constants.Constants.ACCOUNT_DELETE_FAILED25
+
+ACCOUNT_DELETE_FAILED26
+9
+3com.example.org.constants.Constants.ACCOUNT_CREATED28
+
+ACCOUNT_CREATED29
+9
+3com.example.org.constants.Constants.ACCOUNT_UPDATED31
+
+ACCOUNT_UPDATED32
+9
+3com.example.org.constants.Constants.ACCOUNT_DELETED34
+
+ACCOUNT_DELETED35
+9
+3com.example.org.constants.Constants.ACCOUNT_FETCHED37
+
+ACCOUNT_FETCHED38
+:
+4com.example.org.constants.Constants.ACCOUNTS_FETCHED40
+
+ACCOUNTS_FETCHED41
+7
+1com.example.org.constants.Constants.MOBILE_EXISTS43
+
+MOBILE_EXISTS44
+6
+0com.example.org.constants.Constants.EMAIL_EXISTS46
+
+EMAIL_EXISTS47
+8
+2com.example.org.constants.Constants.INVALID_MOBILE49
+
+INVALID_MOBILE50J
+
+1
+12Z
+
+3	
+354jÓ
+9
+64
+678 *
+1 (:3B
+	
+9
+10
+
+
+11
+12
+@
+14:
+141516 *
+1 (26:3B
+	
+9
+10
+
+
+11
+17
+@
+27:
+272816 *
+1 (26:3B
+	
+9
+10
+
+
+11
+29
+@
+42:
+424316 *
+1 (26:3B
+	
+9
+10
+
+
+11
+44
+@
+21:
+212216 *
+1 (26:3B
+	
+9
+10
+
+
+11
+23
+@
+24:
+242516 *
+1 (26:3B
+	
+9
+10
+
+
+11
+26
+@
+39:
+394016 *
+1 (26:3B
+	
+9
+10
+
+
+11
+41
+@
+30:
+303116 *
+1 (26:3B
+	
+9
+10
+
+
+11
+32
+@
+48:
+484916 *
+1 (26:3B
+	
+9
+10
+
+
+11
+50
+@
+33:
+333416 *
+1 (26:3B
+	
+9
+10
+
+
+11
+35
+@
+45:
+454616 *
+1 (26:3B
+	
+9
+10
+
+
+11
+47
+@
+36:
+363716 *
+1 (26:3B
+	
+9
+10
+
+
+11
+38
+@
+18:
+181916 *
+1 (26:3B
+	
+9
+10
+
+
+11
+20r
+
+6613*
+1 (

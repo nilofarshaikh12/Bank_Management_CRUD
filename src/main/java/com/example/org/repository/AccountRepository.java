@@ -13,4 +13,12 @@ public interface AccountRepository extends JpaRepository<Account,UUID> {
 	Account findByAccountIdAndIsDeletedFalse(UUID accountId);
 	
 	List<Account> findByIsDeletedFalse();
+	
+	boolean existsByCustomerMobileNumberAndAccountIdAndIsDeletedFalse(String customerMobileNumber, UUID accountId);
+	
+	boolean existsByCustomerEmailAndAccountIdAndIsDeletedFalse(String customerEmail, UUID accountId);
+	
+	boolean existsByCustomerMobileNumberAndIsDeletedFalse(String customerMobileNumber);
+	
+	boolean existsByCustomerEmailAndIsDeletedFalse(String customerEmail);
 }

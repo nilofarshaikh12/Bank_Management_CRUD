@@ -1,0 +1,7 @@
+com.example.org.controller.AccountController#updateAccount(Ljava/util/UUID;Lcom/example/org/dto/AccountRequestDTO;)LResponseEntity;
+false
+1073596a80d8b86e85d229f631605154
+==
+!unknownMethod! !unknownMethod!
+getStatus com.example.org.exceptions.ResponseMessage#getStatus()I
+updateAccount com.example.org.service.AccountService#updateAccount(Ljava/util/UUID;Lcom/example/org/dto/AccountRequestDTO;)Lcom/example/org/exceptions/ResponseMessage;

@@ -13,5 +13,8 @@ public class Constants {
 	public static final String ACCOUNT_DELETED="Account deleted successfully...";
 	public static final String ACCOUNT_FETCHED="Account retrieved successfully...";
 	public static final String ACCOUNTS_FETCHED="All accounts retrieved successfully...";
+	public static final String MOBILE_EXISTS="Account with given mobile number already exists";
+	public static final String EMAIL_EXISTS="Account with given email address already exists";
+	public static final String INVALID_MOBILE="Mobile number must be exactly 10 digits";
 
 }
