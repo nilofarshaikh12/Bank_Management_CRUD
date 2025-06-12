@@ -57,9 +57,9 @@ This project is built to simulate core banking functionalities for managing cust
 - Use the following command:
 mvn test
 - Includes:
-✅ Unit tests with Mockito
-✅ Integration tests with MockMvc
-✅ Annotated with @SpringBootTest and @Transactional to keep tests isolated
+- ✅ Unit tests with Mockito
+- ✅ Integration tests with MockMvc
+- ✅ Annotated with @SpringBootTest and @Transactional to keep tests isolated
 
 ---
 ### ❗ Exception Handling Strategy
