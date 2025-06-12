@@ -4,12 +4,12 @@ It follows a layered architecture with DTO validation, exception handling, and i
 ---
 ## 📌 Project Description
 This project is built to simulate core banking functionalities for managing customer accounts. It supports:
-- Adding a new bank account
-- Updating or deleting existing accounts
-- Fetching account details
-- Exception handling at both local and global levels
-- API documentation 
-- Unit and integration testing
+ Adding a new bank account
+ Updating or deleting existing accounts
+ Fetching account details
+ Exception handling at both local and global levels
+ API documentation 
+ Unit and integration testing
 ---
 ## 🧰 Technologies Used
 Java 21
