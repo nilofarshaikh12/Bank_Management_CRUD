@@ -2,25 +2,25 @@
 A complete Spring Boot REST API for managing bank accounts. This application allows creating, retrieving, updating, and deleting bank account data.
 It follows a layered architecture with DTO validation, exception handling, and interactive API documentation using Swagger UI.
 ---
-## 📌 Project Description
+### 📌 Project Description
 This project is built to simulate core banking functionalities for managing customer accounts. It supports:
- Adding a new bank account
- Updating or deleting existing accounts
- Fetching account details
- Exception handling at both local and global levels
- API documentation 
- Unit and integration testing
+- Adding a new bank account
+- Updating or deleting existing accounts
+- Fetching account details
+- Exception handling at both local and global levels
+- API documentation 
+- Unit and integration testing
 ---
-## 🧰 Technologies Used
-Java 21
-Spring Boot 3.4.5
-Spring Data JPA (Hibernate)
-PostgreSQL (Database)
-Spring Validation
-MapStruct (DTO Mapping)
-SLF4J + Logback (Logging)
-JUnit 5 + Mockito (Testing)
-Maven
+### 🧰 Technologies Used
+- Java 21
+- Spring Boot 3.4.5
+- Spring Data JPA (Hibernate)
+- PostgreSQL (Database)
+- Spring Validation
+- MapStruct (DTO Mapping)
+- SLF4J + Logback (Logging)
+- JUnit 5 + Mockito (Testing)
+- Maven
 ---
 ### ✅ Prerequisites
 - Java 21
@@ -40,10 +40,10 @@ CREATE DATABASE bank;
 ✅ Step 3: Build and Run the Application
    # Run with Maven
       mvn clean install
-     	mvn spring-boot:run
+      mvn spring-boot:run
     # Or Run from IDE
-	   Open the project in IntelliJ or Eclipse
-	   Run the BankManagementApplication.java class
+      Open the project in IntelliJ or Eclipse
+      Run the BankManagementApplication.java class
 
 ### 🌐 API Documentation
 After starting the application, visit:
