@@ -27,17 +27,17 @@ This project is built to simulate core banking functionalities for managing cust
 - Maven 3.x
 - PostgreSQL installed and running
 ---
-📥 Step 1: Clone the Repository
+### 📥 Step 1: Clone the Repository
 git clone https://github.com/nilofarshaikh12/Bank_Management_CRUD.git
 cd Bank_Management_CRUD
 
-🗃️ Step 2: Create the Database
+### 🗃️ Step 2: Create the Database
 Make sure PostgreSQL is installed and running.
 Then open your terminal or pgAdmin and run:
 CREATE DATABASE bank;
 ℹ️ Note: The application expects a database named bank. You can change this in src/main/resources/application.properties if needed.
 
-⚙️ Step 3: Build and Run the Application
+### ⚙️ Step 3: Build and Run the Application
 ▶️ Run with Maven:
 mvn clean install
 mvn spring-boot:run
@@ -46,12 +46,12 @@ Open the project in IntelliJ IDEA or Eclipse
 Locate the main class: BankManagementApplication.java
 Run it as a Java Application
 
-🌐 API Documentation with Swagger
+### 🌐 API Documentation with Swagger
 Once the app is running, open your browser and visit:
 http://localhost:8080/swagger-ui.html
 You can test all endpoints (GET, POST, PUT, DELETE) directly using Swagger UI.
 
-🧪 How to Run Tests
+### 🧪 How to Run Tests
 Use the following command:
 mvn test
 Includes:
@@ -59,7 +59,7 @@ Includes:
 ✅ Integration tests with MockMvc
 ✅ Annotated with @SpringBootTest and @Transactional to keep tests isolated
 
-❗ Exception Handling Strategy
+### ❗ Exception Handling Strategy
 Global: Centralized error handling with @ControllerAdvice
 Local: Custom try-catch blocks where needed
 Custom Exceptions: For cases like “Account Not Found”, validation failures, etc.
