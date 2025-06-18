@@ -64,9 +64,9 @@ mvn spring-boot:run
 - Run it as a Java Application
 ---
 ### 🌐 API Documentation with Swagger
-Once the app is running, open your browser and visit:
- [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
-You can test all endpoints (GET, POST, PUT, DELETE) directly using Swagger UI.
+- Once the app is running, open your browser and visit:  
+  [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)  
+- You can test all endpoints (GET, POST, PUT, DELETE) directly using Swagger UI.
 ---
 ### 🧪 How to Run Tests
 Use the following command to run all tests:
