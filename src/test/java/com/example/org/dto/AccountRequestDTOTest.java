@@ -32,7 +32,7 @@ class AccountRequestDTOTest {
 	
 	
 	private AccountRequestDTO buildValidDTO() {
-		return new AccountRequestDTO("Roy", "1234567893", "Roy@gmail.com", 
+		return new AccountRequestDTO("Roy", "1234567893", "roy@gmail.com", 
 				                           "Pune", AccountType.CURRENT, 10000.0);
 	}
 	

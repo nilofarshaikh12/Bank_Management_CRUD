@@ -29,7 +29,7 @@ import jakarta.transaction.Transactional;
 @SpringBootTest
 @AutoConfigureMockMvc
 @Transactional
-public class AccountControllerIntegrationTest {
+class AccountControllerIntegrationTest {
 		
 	@Autowired
 	private MockMvc mockMvc;

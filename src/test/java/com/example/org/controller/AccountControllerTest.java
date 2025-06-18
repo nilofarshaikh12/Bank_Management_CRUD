@@ -24,7 +24,7 @@ import com.example.org.model.Account;
 import com.example.org.model.AccountType;
 import com.example.org.service.AccountService;
 
-public class AccountControllerTest {
+class AccountControllerTest {
 
 	@InjectMocks
 	private AccountController accountController;

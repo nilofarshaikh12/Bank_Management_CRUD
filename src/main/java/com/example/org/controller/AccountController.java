@@ -1,9 +1,7 @@
 package com.example.org.controller;
 
 import java.util.List;
-
 import java.util.UUID;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,8 +21,11 @@ import jakarta.validation.Valid;
 @RestController
 public class AccountController {
 
-	@Autowired
 	private AccountService accountService;
+	
+	public AccountController(AccountService accountService) {
+		this.accountService=accountService;
+	}
 	
 	@PostMapping("/add")
 	public ResponseEntity<ResponseMessage<AccountResponseDTO>> createAccount(@Valid @RequestBody AccountRequestDTO accountRequestDTO){

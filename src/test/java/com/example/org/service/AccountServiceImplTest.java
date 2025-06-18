@@ -21,7 +21,7 @@ import com.example.org.model.AccountType;
 import com.example.org.repository.AccountRepository;
 
 @ExtendWith(MockitoExtension.class)
-public class AccountServiceImplTest {
+class AccountServiceImplTest {
 	
 	@InjectMocks
 	private AccountServiceImpl accountService;

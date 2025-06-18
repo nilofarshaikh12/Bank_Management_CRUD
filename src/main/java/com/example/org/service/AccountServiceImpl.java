@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import org.slf4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import com.example.org.constants.Constants;
@@ -21,11 +20,13 @@ public class AccountServiceImpl implements AccountService {
 
 	private static final Logger logger=LoggerFactory.getLogger(AccountServiceImpl.class);
 	
-	@Autowired
-	private AccountRepository accountRepository;
-
-	@Autowired
-	private AccountConverter accountConverter;
+	private final AccountRepository accountRepository;
+	private final AccountConverter accountConverter;
+	
+	public AccountServiceImpl(AccountRepository accountRepository,AccountConverter accountConverter) {
+		this.accountRepository=accountRepository;
+		this.accountConverter=accountConverter;
+	}
 	
 	@Override
 	public ResponseMessage<AccountResponseDTO> createAccount(AccountRequestDTO accountRequestDTO) {
@@ -104,13 +105,8 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public ResponseMessage<AccountResponseDTO> updateAccount(UUID accountId, AccountRequestDTO accountRequestDTO) {
 		logger.info("Updating account with id: {}",accountId);
-		Account account;
 		try {
-			 account = accountRepository.findByAccountIdAndIsDeletedFalse(accountId);
-		}catch(Exception ex) {
-			logger.error("Error occur while updating account with id: {}",accountId);
-			return new ResponseMessage<>(Constants.ACCOUNT_UPDATE_FAILED, HttpStatus.BAD_REQUEST.value());
-		}
+			Account account = accountRepository.findByAccountIdAndIsDeletedFalse(accountId);
 			if (account == null) {
 				logger.warn("Account with id {} not found for updating",accountId);
 				return new ResponseMessage<>(Constants.ACCOUNT_NOT_FOUND, HttpStatus.NOT_FOUND.value());
@@ -136,18 +132,18 @@ public class AccountServiceImpl implements AccountService {
 			AccountResponseDTO accountResponseDTO= accountConverter.toResponseDTO(account);
 			logger.info("Account updated successfully: {}",accountResponseDTO);
 			return new ResponseMessage<>(Constants.ACCOUNT_UPDATED,HttpStatus.OK.value(),accountResponseDTO);
+		}catch(Exception ex) {
+			logger.error("Error occur while updating account with id: {}",accountId);
+			return new ResponseMessage<>(Constants.ACCOUNT_UPDATE_FAILED, HttpStatus.BAD_REQUEST.value());
+		}
 	}
 	
 	@Override
 	public ResponseMessage<Void> deleteAccount(UUID accountId) {
 		logger.info("Attempting to delete account with id: {}",accountId);
-		Account account;
+		
 		try {
-			account = accountRepository.findByAccountIdAndIsDeletedFalse(accountId);
-		}catch(Exception ex) {
-			logger.error("Error occurred while deleting account with id: {}",accountId,ex);
-			return new ResponseMessage<>(Constants.ACCOUNT_DELETE_FAILED, HttpStatus.BAD_REQUEST.value());
-		}
+			Account account = accountRepository.findByAccountIdAndIsDeletedFalse(accountId);
 			if (account == null) {
 				logger.warn("Account with id {} not found for deletion",accountId);
 				return new ResponseMessage<>(Constants.ACCOUNT_NOT_FOUND, HttpStatus.NOT_FOUND.value());
@@ -156,7 +152,10 @@ public class AccountServiceImpl implements AccountService {
 			accountRepository.save(account);
 			logger.info("Account with id {} marked as deleted successfully",accountId);
 			return new ResponseMessage<>(Constants.ACCOUNT_DELETED, HttpStatus.OK.value());
-		
+		}catch(Exception ex) {
+			logger.error("Error occurred while deleting account with id: {}",accountId,ex);
+			return new ResponseMessage<>(Constants.ACCOUNT_DELETE_FAILED, HttpStatus.BAD_REQUEST.value());
+		}
 	}
 
 }
