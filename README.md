@@ -12,50 +12,67 @@ This project is built to simulate core banking functionalities for managing cust
 - Unit and integration testing
 ---
 ### 🧰 Technologies Used
-- Java 21
-- Spring Boot 3.4.5
-- Spring Data JPA (Hibernate)
-- PostgreSQL (Database)
-- Spring Validation
-- MapStruct (DTO Mapping)
-- SLF4J + Logback (Logging)
-- JUnit 5 + Mockito (Testing)
-- Maven
+| Technology          | Description                          |
+|---------------------|--------------------------------------|
+| Java                | Version 21                           |
+| Spring Boot         | Version 3.4.5                        |
+| Spring Data JPA     | Hibernate-based ORM                  |
+| PostgreSQL          | Relational Database                  |
+| JUnit 5 + Mockito   | Testing Framework                    |
+| Maven               | Build and Dependency Management      |
 ---
 ### ✅ Prerequisites
 - Java 21
 - Maven 3.x
 - PostgreSQL installed and running
 ---
-### 📥 Step 1: Clone the Repository
-- git clone https://github.com/nilofarshaikh12/Bank_Management_CRUD.git
-- cd Bank_Management_CRUD
+### 📥 Step 1:Clone the repository and navigate to the project directory:
+
+```bash
+# Clone the repository from GitHub
+git clone https://github.com/nilofarshaikh12/Bank_Management_CRUD.git
+
+# Move into the project directory
+cd Bank_Management_CRUD
 
 ### 🗃️ Step 2: Create the Database
 - Make sure PostgreSQL is installed and running.
-- Then open your terminal or pgAdmin and run:
-  CREATE DATABASE bank;
+- Open your terminal or pgAdmin and run the following command to create the database:
+```bash
+# Create PostgreSQL database named 'bank'
+CREATE DATABASE bank;
+
 - ℹ️ Note: The application expects a database named bank. You can change this in src/main/resources/application.properties if needed.
 
 ### ⚙️ Step 3: Build and Run the Application
-- ▶️ Run with Maven:
-- mvn clean install
-- mvn spring-boot:run
-- 💻 Or Run from IDE:
-- Open the project in IntelliJ IDEA or Eclipse
-- Locate the main class: BankManagementApplication.java
-- Run it as a Java Application
+#### ▶️ Run with Maven:
+```bash
+# Clean and build the project
+mvn clean install
+
+# Run the Spring Boot application
+mvn spring-boot:run
+
+#### 💻 Or Run from IDE:
+# Open the project in IntelliJ IDEA or Eclipse
+# Locate the main class: BankManagementApplication.java
+# Run it as a Java Application
 
 ---
 ### 🌐 API Documentation with Swagger
-- Once the app is running, open your browser and visit:
- http://localhost:8080/swagger-ui.html
-- You can test all endpoints (GET, POST, PUT, DELETE) directly using Swagger UI.
+
+Once the app is running, open your browser and visit:
+
+🔗 [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+You can test all endpoints (GET, POST, PUT, DELETE) directly using Swagger UI.
 
 ---
 ### 🧪 How to Run Tests
-- Use the following command:
+Use the following command to run all tests:
+```bash
 mvn test
+
 - Includes:
 - ✅ Unit tests with Mockito
 - ✅ Integration tests with MockMvc
