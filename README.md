@@ -29,11 +29,11 @@ This project is built to simulate core banking functionalities for managing cust
 ### 📥 Step 1:Clone the repository and navigate to the project directory:
 
 
-# Clone the repository from GitHub
+#### Clone the repository from GitHub
 ```bash
 git clone https://github.com/nilofarshaikh12/Bank_Management_CRUD.git
 ```
-# Move into the project directory
+#### Move into the project directory
 ```bash
 cd Bank_Management_CRUD
 ```
