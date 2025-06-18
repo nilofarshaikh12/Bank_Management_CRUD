@@ -41,46 +41,44 @@ cd Bank_Management_CRUD
 ### 🗃️ Step 2: Create the Database
 - Make sure PostgreSQL is installed and running.
 - Open your terminal or pgAdmin and run the following command to create the database:
+#### Create PostgreSQL database named 'bank'
 ```bash
-# Create PostgreSQL database named 'bank'
 CREATE DATABASE bank;
-
+```
 - ℹ️ Note: The application expects a database named bank. You can change this in src/main/resources/application.properties if needed.
 
 ### ⚙️ Step 3: Build and Run the Application
 #### ▶️ Run with Maven:
+
+##### Clean and build the project
 ```bash
-# Clean and build the project
 mvn clean install
-
-# Run the Spring Boot application
+```
+##### Run the Spring Boot application
+```bash
 mvn spring-boot:run
-
+```
 #### 💻 Or Run from IDE:
-# Open the project in IntelliJ IDEA or Eclipse
-# Locate the main class: BankManagementApplication.java
-# Run it as a Java Application
-
+- Open the project in IntelliJ IDEA or Eclipse
+- Locate the main class: BankManagementApplication.java
+- Run it as a Java Application
 ---
 ### 🌐 API Documentation with Swagger
-
 Once the app is running, open your browser and visit:
-
+```bash
 🔗 [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
-
+```
 You can test all endpoints (GET, POST, PUT, DELETE) directly using Swagger UI.
-
 ---
 ### 🧪 How to Run Tests
 Use the following command to run all tests:
 ```bash
 mvn test
-
+```
 - Includes:
 - ✅ Unit tests with Mockito
 - ✅ Integration tests with MockMvc
 - ✅ Annotated with @SpringBootTest and @Transactional to keep tests isolated
-
 ---
 ### ❗ Exception Handling Strategy
 - Global: Centralized error handling with @ControllerAdvice
